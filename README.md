@@ -16,6 +16,13 @@ However, they're not exactly the same. The two lists below defines the differenc
 * Requires Git  
 * Online(cloud-based) for collaboration  
 
+In order to understand the basics of Git and Github, there are some terms thats you must know.
+
+Directory
+Initialize - To prepare a repository for a certain language (in this case, Github language)
+Repository (repo for short) - 
+
+There are other terms that you should know. 
 ---
 ## Initial Setup
 
@@ -34,13 +41,18 @@ Step 2:
 
 Now the connection is established. But is it secure? The answer is NO. 
 In order to make it secure, you'll have to set a SSH (secure shell) key that serves as a password for the connection. 
-To do that, 
+1. Go to the settings in your coding platform. There should be a tab about SSH keys. 
+2. Navigate to that tab and copy the SSH key. 
+3. In Github, go to settings and go into the SSH keys tab. 
+4. Proceed to adding a SSH key. Be sure to give it a relevant title (the name of your coding platform is recommended)
+5. Go back to your coding platform, into your IDE. Type in ssh -T git@github.com .Then type yes.
 
-go to settings in Github and 
-
+Congrats!! You have officially established a connection between your coding platform and Github. 
+However, before you start coding, you still have to setup your repository.
 
 ---
 ## Repository Setup
+
 
 
 
