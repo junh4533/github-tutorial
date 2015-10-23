@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>GitHub-tutorial2 by junh4533</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>GitHub-tutorial2</h1>
+          <h2>Gitting started with git</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/junh4533/github-tutorial/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/junh4533/github-tutorial/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/junh4533/github-tutorial" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <h1>
+<a id="github-tutorial" class="anchor" href="#github-tutorial" aria-hidden="true"><span class="octicon octicon-link"></span></a>GitHub Tutorial</h1>
+
+<p><em>by Jun Huang</em></p>
+
+<hr>
+
+<h2>
+<a id="git-vs-github" class="anchor" href="#git-vs-github" aria-hidden="true"><span class="octicon octicon-link"></span></a>Git vs. GitHub</h2>
+
+<p>Git and Github are programs that manages files using snapshots of your code.<br>
+You can revisit each change that is committed in order to go back to the previous working code.<br>
+However, they're not exactly the same. The two lists below defines the differences between the two.</p>
+
+<h4>
+<a id="git" class="anchor" href="#git" aria-hidden="true"><span class="octicon octicon-link"></span></a>Git:</h4>
+
+<ul>
+<li>Offline(local)<br>
+</li>
+<li>Doesn't require Github<br>
+</li>
+</ul>
+
+<h4>
+<a id="github" class="anchor" href="#github" aria-hidden="true"><span class="octicon octicon-link"></span></a>Github:</h4>
+
+<ul>
+<li>Requires Git<br>
+</li>
+<li>Online(cloud-based) for collaboration<br>
+</li>
+</ul>
+
+<hr>
+
+<h2>
+<a id="part-1-initial-setup" class="anchor" href="#part-1-initial-setup" aria-hidden="true"><span class="octicon octicon-link"></span></a>Part 1: Initial Setup</h2>
+
+<p><em>This step will establish the connection between Github and your coding platform (eg: Cloud 9, Nitrous, etc..)</em></p>
+
+<pre><code>Step 1:
+</code></pre>
+
+<p>Before establishing any connections, the first step is to make an account.<br>
+Register for Github and your coding platform (if necessary).<br>
+Make sure you select the free pricing plan.</p>
+
+<p>Now the connection is established. But it is not secure yet.<br>
+In order to make it secure, you'll have to setup a SSH (secure shell) key, which serves as a password for the connection 
+between Github and your coding platform.</p>
+
+<pre><code>Step 2:
+</code></pre>
+
+<ol>
+<li>Go to the settings in your coding platform. There should be a tab about SSH keys.<br>
+</li>
+<li>Navigate to that tab and copy the SSH key.<br>
+</li>
+<li>In Github, go to settings and navigate into the SSH keys tab.<br>
+</li>
+<li>Proceed to adding a SSH key. Be sure to give it a relevant title (the name of your coding platform is recommended).<br>
+</li>
+<li>
+<p>Go back to your coding platform, into your IDE. Type in <code>ssh -T git@github.com</code>. Then type yes.Git vs. GitHub.</p>
+
+<p>Step 3:</p>
+</li>
+</ol>
+
+<p>Now you'll have to login and configure your account.
+Use both of the following code to log you into Github in your coding platform:</p>
+
+<p><code>git config --global user.name (name)</code><br>
+<code>git config --global user.email (email)</code></p>
+
+<p><strong>The global means that this will apply for all repositories and the "--" remembers that you have logged in and so this is a one time setup.</strong></p>
+
+<p><em>Congrats!! You have officially established a connection between your coding platform and Github.</em><br>
+<em>However, before you start coding, you still have to setup your repository.</em></p>
+
+<hr>
+
+<h2>
+<a id="part-2-repository-setup" class="anchor" href="#part-2-repository-setup" aria-hidden="true"><span class="octicon octicon-link"></span></a>Part 2: Repository Setup</h2>
+
+<p><em>This step will initialize your repo and tells the computer where to save your files.</em></p>
+
+<h3>
+<a id="key-terms" class="anchor" href="#key-terms" aria-hidden="true"><span class="octicon octicon-link"></span></a>Key Terms:</h3>
+
+<p><strong>Directory - A folder that stores files</strong><br>
+<strong>Initialize - To prepare a directory for a certain language (in this case, Github language)</strong><br>
+<strong>Repository (repo for short) - An initialized repo, ready for coding</strong>
+<strong>Save - Storing a file locally</strong><br>
+<strong>Add - Command to add a file to the stage</strong><br>
+<strong>Stage - A place where a file is ready to be committed</strong><br>
+<strong>Commit - Command to save a file locally on Git.</strong></p>
+
+<pre><code>Step 4:
+</code></pre>
+
+<p>To being coding, first you'll have to create a directory. Then initialize the directory so that it is a repo.</p>
+
+<ol>
+<li>Make sure you're in the home folder.<br>
+If you're in the home folder, you shouldn't be able to see any files when you type in <code>ls</code> into the IDE.</li>
+<li>Make a directory using <code>mkdir (folder name)</code>.</li>
+<li>Initialize the directory using <code>git init</code>.</li>
+</ol>
+
+<hr>
+
+<p><strong><em>In case you initialized the wrong directory, you should follow these steps before proceeding further.</em></strong></p>
+
+<p>Now that you've initialized the wrong directory, you would want to undo it.</p>
+
+<ol>
+<li>Navigate to the repo where you initialized.</li>
+<li>In the gear icon on the filer tree, there should be an option to show hidden files.</li>
+<li>Enable that option and you should be able to see a folder called <em>.git</em>
+</li>
+<li>In your IDE, type in <code>rm -rf .git</code>.</li>
+</ol>
+
+<p><strong>"RM" stands for remove and the dash following it is a flag.</strong><br>
+With the flag, you are triggering extra options other than simply just removing a file or directory.<br>
+<strong>In this case, the flags "r" and "f" represents recursive and force.</strong><br>
+Deleteing recrusively will delete the folder <em>.git</em> and remove any files within that folder.<br>
+Without deleteing recursively, the folder would still be there because there are files within that fodler.<br>
+Deleteing forcefully means to delete a system file that normally cannot be removed.<br>
+After following these steps, you're repo is no longer initialized.<br>
+The next time you initialize a directory, make sure you're in the directory that you want to initialize.</p>
+
+<hr>
+
+<h2>
+<a id="part-3-understanding-workflow--commands" class="anchor" href="#part-3-understanding-workflow--commands" aria-hidden="true"><span class="octicon octicon-link"></span></a>Part 3: Understanding Workflow &amp; Commands</h2>
+
+<p><em>In order to upload your code to Github, you'll have to go through the process of saving, adding to stage, committing, and pushing.</em></p>
+
+<h3>
+<a id="key-terms-1" class="anchor" href="#key-terms-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Key Terms:</h3>
+
+<p><strong>Push - Command to send files from your local machine to the Github repo</strong></p>
+
+<p>The following steps will guide you into understanding the workflow of Github:</p>
+
+<p><em>**Once in a while, you might want to use <code>git status</code> to see if the files are added to the stage.</em>* 
+<strong>You can also use it to see if your files have been committed.</strong></p>
+
+<p>Let's test out your first repo!  </p>
+
+<pre><code>Step 5:
+</code></pre>
+
+<ol>
+<li>Make a file in your repo using <code>touch (file name)</code>.
+Make sure you're in the folder where you want to create the file.<br>
+If you make in the wrong folder, you can always use <code>rm (file name)</code> to delete the file.</li>
+<li>Save locally (you can find this option in the File Tab in the toolbar)<br>
+</li>
+<li>Add the file to the "stage" by typing <code>git add (file name)</code>. You can also add all files changed by typing <code>git add --all</code>.<br>
+</li>
+<li>Commit the file by typing git commit -m "(message)".<br>
+<strong>The "-m" represents message</strong> and within the quotation marks that follows it,<br>
+you can leave a message for yourself so you can go back and see what you've done in that save.<br>
+</li>
+</ol>
+
+<p>You've finished making the repo on your coding platform.<br>
+Now you would want to push the files to Github.<br>
+The cloud server where you store your files is known as the remote.<br>
+In order to save the files online, you'll have to push it to the repo in the remote.<br>
+In most cases, the file will be pushed the remote nicknamed "origin".<br>
+Inside of origin, there are many branches. To keep things simple, you'll want to push it to the "master" branch in "origin".  </p>
+
+<p>First let's setup the remote and then push it to cloud.</p>
+
+<pre><code>Step 6:
+</code></pre>
+
+<ol>
+<li>Go to Github and click on the + symbol on the toolbar.</li>
+<li>Select new repo.</li>
+<li>Name the repo <strong>EXACTLY THE SAME AS THE ONE IN YOUR CODING PLATFORM</strong>.</li>
+<li>Create the repo.</li>
+<li>Make sure SSH is selected.</li>
+<li>On the section where it says "...or push an existing repository from the command line",<br>
+copy the first line of code and paste it into the IDE.<br>
+The code should look something like this: <code>git remote add origin git@github.com:(username)/(repo name).git</code><br>
+</li>
+<li>Type <code>git push -u origin master</code>.<br>
+</li>
+</ol>
+
+<p>Does it look familiar? Well, you already know what push, origin, and master means.<br>
+The <strong>"-u" literally means upstream</strong>, which tells your computer to push it to the same place (origin master) everytime you push.<br>
+Next time you want to push code, you only have to type <code>git push</code> instead of typing the entire thing.</p>
+        </section>
+
+        <footer>
+          GitHub-tutorial2 is maintained by <a href="https://github.com/junh4533">junh4533</a><br>
+          This page was generated by <a href="https://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
