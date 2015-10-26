@@ -48,8 +48,8 @@ between Github and your coding platform.
 Now you'll have to login and configure your account.
 Use both of the following code to log you into Github in your coding platform:
 
-`git config --global user.name (name)`  
-`git config --global user.email (email)`
+`git config --global user.name name`  
+`git config --global user.email email`
 
 **The global means that this will apply for all repositories and the "--" remembers that you have logged in and so this is a one time setup.**
 
@@ -77,7 +77,7 @@ To being coding, first you'll have to create a directory. Then initialize the di
 
 1. Make sure you're in the home folder.  
 If you're in the home folder, you shouldn't be able to see any files when you type in `ls` into the IDE.
-2. Make a directory using `mkdir (folder name)`.
+2. Make a directory using `mkdir folder-name`.
 3. Initialize the directory using `git init`.
 
 ---
@@ -119,11 +119,11 @@ Let's test out your first repo!
 
     Step 5:
 
-1. Make a file in your repo using `touch (file name)`.
+1. Make a file in your repo using `touch file-name`.
 Make sure you're in the folder where you want to create the file.  
-If you make in the wrong folder, you can always use `rm (file name)` to delete the file.
+If you make in the wrong folder, you can always use `rm file-name` to delete the file.
 2. Save locally (you can find this option in the File Tab in the toolbar)  
-3. Add the file to the "stage" by typing `git add (file name)`. You can also add all files changed by typing `git add --all`.  
+3. Add the file to the "stage" by typing `git add file-name`. You can also add all files changed by typing `git add --all`.  
 4. Commit the file by typing git commit -m "(message)".  
 **The "-m" represents message** and within the quotation marks that follows it,  
 you can leave a message for yourself so you can go back and see what you've done in that save.  
@@ -146,7 +146,7 @@ First let's setup the remote and then push it to cloud.
 5. Make sure SSH is selected.
 6. On the section where it says "...or push an existing repository from the command line",  
 copy the first line of code and paste it into the IDE.  
-The code should look something like this: `git remote add origin git@github.com:(username)/(repo name).git`  
+The code should look something like this: `git remote add origin git@github.com:username/repo-name.git`  
 7. Type `git push -u origin master `.  
 
 Does it look familiar? Well, you already know what push, origin, and master means.  
